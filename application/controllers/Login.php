@@ -99,7 +99,7 @@ class Login extends CI_Controller
         $data = new stdClass();
 
 
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]');
+        $this->form_validation->set_rules('pass', 'Password', 'trim|required|min_length[6]');
         $this->form_validation->set_rules('password_confirm', 'Confirm Password', 'trim|required|min_length[6]|matches[password]');
 
         if($this->user->checkShortCode($shortCode)){
@@ -107,6 +107,10 @@ class Login extends CI_Controller
             if($this->form_validation->run()==false){
                 $this->load->view('login/change_password',$data);
             }else{
+
+                $pWord =$this->input->post('pass');
+
+                $this->user->updatePassword($shortCode,$pWord);
 
             }
 
