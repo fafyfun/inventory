@@ -81,4 +81,14 @@ class Login_model extends CI_Model
         return $this->db->get()->row('user_id');
     }
 
+    public function checkShortCode($shortCode) {
+
+        $this->db->select('user_id');
+        $this->db->from('user');
+        $this->db->where('shortcode', $shortCode);
+
+        return $this->db->get()->row('user_id');
+
+    }
+
 }

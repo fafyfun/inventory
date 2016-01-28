@@ -65,27 +65,56 @@ class Login extends CI_Controller
         $data = new stdClass();
 
         // set validation rules
-        $this->form_validation->set_rules('email', 'Email', 'required|email');
+        $this->form_validation->set_rules('email', 'Email', 'required|valid_email');
 
         if($this->form_validation->run()==false){
             $this->load->view('login/forgot_password',$data);
         }else{
+
             $email = $this->input->post('email');
 
             if($this->user->checkEmail($email)){
 
-                echo 'email sent';
+	            $this->load->helper('string');
+
+	            echo random_string('alnum', 16);
+
+
 
             }else{
                 // login failed
                 $data->error = 'Wrong email Id.';
 
                 // send error to the view
-                $this->load->view('login/index_view',$data);
+                $this->load->view('login/forgot_password',$data);
             }
         }
 
 
+    }
+
+    public function change_password($shortCode)
+    {
+        // create the data object
+        $data = new stdClass();
+
+
+        $this->form_validation->set_rules('password', 'Password', 'trim|required|min_length[6]');
+        $this->form_validation->set_rules('password_confirm', 'Confirm Password', 'trim|required|min_length[6]|matches[password]');
+
+        if($this->user->checkShortCode($shortCode)){
+
+            if($this->form_validation->run()==false){
+                $this->load->view('login/change_password',$data);
+            }else{
+
+            }
+
+        }else{
+            //redirect
+            echo "Not Valid";
+        }
+        
     }
 
 }
