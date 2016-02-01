@@ -91,4 +91,15 @@ class Login_model extends CI_Model
 
     }
 
+    public function updatePassword($passWord,$checkCode)
+    {
+        $new_password =array('password'=> $this->hash_password($passWord));
+
+        $this->db->where('shortcode', $checkCode);
+
+
+        return $this->db->update('user', $passWord);
+
+    }
+
 }

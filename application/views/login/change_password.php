@@ -1,12 +1,19 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: fawaz
- * Date: 1/28/16
- * Time: 2:59 PM
- */
+<?php if (validation_errors()) : ?>
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <?php echo validation_errors() ?>
+        </div>
+    </div>
+<?php endif; ?>
+<?php if (isset($error)) : ?>
+    <div class="col-md-12">
+        <div class="alert alert-danger" role="alert">
+            <?php echo $error ?>
+        </div>
+    </div>
+<?php endif; ?>
 
-echo form_open()?>
+<?php echo form_open()?>
 
 <input type="password" name="pass" id="pass">
 <input type="password" name="password_confirm" id="password_confirm">
