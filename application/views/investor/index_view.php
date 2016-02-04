@@ -25,34 +25,21 @@
     </div>    <div class="form-group">
         <input class="form-control" placeholder="City" name="city" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="  1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="State" name="state" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Zip Code" name="zip" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Country" name="country" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Email Address" name="email" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Confirm Email" name="confirmEmail" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Home Phone" name="hPhone" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
+        <input class="form-control" placeholder="Business Phone" name="bPhone" type="text" value="">
     </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
-    </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
-    </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
-    </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
-    </div>    <div class="form-group">
-        <input class="form-control" placeholder="Address 1" name="address_1" type="text" value="">
-    </div>
-    <div class="checkbox">
-        <label>
-            <input name="remember" type="checkbox" value="Remember Me">Remember Me
-        </label>
+        <input class="form-control" placeholder="Mobile Phone" name="mPhone" type="text" value="">
     </div>
     <!-- Change this to a button or input when using this as a form -->
     <button type="submit" class="btn btn-lg btn-success btn-block">Login</button>
